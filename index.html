@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Quiz and Math Games!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to the Quiz Game</h1>
+        <button id="startButton" class="button" onclick="showLevelOptions()">Start Game</button>
+        <!-- <p><a href="introduction.html" class="button">Highscores</a></p>
+        <p><a href="leaderboard.html" class="button">Leaderboard</a></p> -->
+        <button class="button" onclick="showInstructions()">Instructions</button>
+
+        <div id="levelModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeLevelOptions()">&times;</span>
+                <h2>Select Level:</h2>
+                <a href="Easy/index.html">
+                    <button onclick="startGame('easy')" class="button">Easy</button>
+                </a>
+                <a href="Medium/index.html">
+                    <button onclick="startGame('medium')" class="button">Medium</button>
+                </a>
+                <a href="Hard/index.html">
+                    <button onclick="startGame('hard')" class="button">Hard</button>
+                </a>
+            </div>
+        </div>
+
+        <div id="instructionModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeInstructions()">&times;</span>
+                <h1 style="color: white;">Game Instructions</h1>
+                <p style="text-align: left; color: white;"><b>1.Choose from our range of quizzes, Click on the quiz
+                        title to
+                        begin.<br><br>
+                        2.Difficulty Level: Before starting the quiz, select your preferred<br>difficulty level. Whether
+                        you're a beginner or an expert, we have quizzes tailored to suit your skill level.<br><br>
+                        3.Once you've selected your quiz and difficulty level, click on the "Start<br>Quiz" button to
+                        begin answering questions.<br><br>
+                        4.Read each question carefully and select the correct answer from the options YES AND NO
+                        provided.<br>
+                        OPEN YOUR PALM FOR CHOOSING OPTION YES AND CLOSE YOUR PALM FOR CHOOSING OPTION NO.If you're
+                        unsure, take your best guess!<br><br>
+                        5.Review Your Score: After completing the quiz, you'll receive instant feedback on your
+                        performance.<br>
+                        Review your score, see which questions you answered correctly, and learn from any
+                        mistakes.<br><br>
+                        6.Explore More Quizzes: Don't stop here! Explore our other quizzes to expand your mathematical
+                        knowledge and challenge yourself with new concepts.</b></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyrights">
+        <p><b>&copy 2024 BASS, All rights reserved</b></p>
+    </div>
+
+    <script>
+        function showLevelOptions() {
+            var modal = document.getElementById('levelModal');
+            modal.style.display = 'block';
+        }
+
+        function closeLevelOptions() {
+            var modal = document.getElementById('levelModal');
+            modal.style.display = 'none';
+        }
+
+        function startGame(level) {
+            // Add your game start logic here
+            console.log('Starting game with level:', level);
+        }
+
+        function showInstructions() {
+            var modal = document.getElementById('instructionModal');
+            modal.style.display = 'block';
+        }
+
+        function closeInstructions() {
+            var modal = document.getElementById('instructionModal');
+            modal.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

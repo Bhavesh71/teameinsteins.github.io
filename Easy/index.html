@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Yes/No Game Quiz</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="color: white;">Welcome to the Yes/No Quiz Game!</h1>
+        <div id="timer-container">
+            <h2 id="timer"></h2>
+        </div>
+        <div id="question-container">
+            <h2 id="question"></h2>
+            <div id="answer-buttons">
+                <button class="btn" onclick="checkAnswer(true)">Yes</button>
+                <button class="btn" onclick="checkAnswer(false)">No</button>
+            </div>
+        </div>
+        <div id="score-container">
+            <h3>Your Score: <span id="score">0</span></h3>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
